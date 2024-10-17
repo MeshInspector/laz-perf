@@ -14,7 +14,7 @@ are few source files and no dependencies. Assuming you have Git, CMake, make and
 installed, here is the
 process on the Unix command line. The process is similar on Windows.
 
-    git clone https://github.com/hobu/laz-perf.git
+    git clone https://github.com/MeshInspector/laz-perf.git
     cd laz-perf
     mkdir build
     cd build
