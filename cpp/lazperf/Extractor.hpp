@@ -117,16 +117,15 @@ public:
     {
         s = std::string(m_gptr, size);
         m_gptr += size;
-        while (size)
+        // end the string on first zero char
+        for ( size_t i = 0; i < size; ++i )
         {
-            size--;
-            if (s[size] != '\0')
+            if ( s[i] == '\0' )
             {
-                s.resize(size + 1);
-                return;
+                s.resize( i );
+                break;
             }
         }
-        s.clear();
     }
 
     /**
