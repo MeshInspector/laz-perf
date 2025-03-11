@@ -24,9 +24,9 @@ set(WITH_EMBIND TRUE CACHE BOOL "Choose if Emscripten (Wasm/JS) bindings should 
 
 if (EMSCRIPTEN)
     set(WITH_TESTS NO)
-else()
-    include(${LAZPERF_CMAKE_DIR}/install.cmake)
 endif()
+
+include(${LAZPERF_CMAKE_DIR}/install.cmake)
 
 if(WITH_TESTS)
     enable_testing()

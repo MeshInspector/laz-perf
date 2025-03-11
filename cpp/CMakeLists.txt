@@ -7,9 +7,7 @@ file(GLOB SRCS
 set (LAZPERF_SHARED_LIB lazperf)
 set (LAZPERF_STATIC_LIB lazperf_s)
 
-if (NOT EMSCRIPTEN)
-    lazperf_add_library(${LAZPERF_SHARED_LIB} SHARED ${SRCS})
-endif()
+lazperf_add_library(${LAZPERF_SHARED_LIB} SHARED ${SRCS})
 lazperf_add_library(${LAZPERF_STATIC_LIB} STATIC ${SRCS})
 
 install(
