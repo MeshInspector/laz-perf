@@ -31,7 +31,11 @@ install(
 )
 
 add_subdirectory(benchmarks)
-add_subdirectory(tools)
+
+if (EMSCRIPTEN AND WITH_TOOLS)
+    add_subdirectory(tools)
+endif()
+
 if (EMSCRIPTEN AND WITH_EMBIND)
     add_subdirectory(emscripten)
 endif()

@@ -20,6 +20,7 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
 
 # Choose package components
 set(WITH_TESTS TRUE CACHE BOOL "Choose if LAZPERF unit tests should be built")
+set(WITH_TOOLS TRUE CACHE BOOL "Choose if LAZPERF tools should be built")
 set(WITH_EMBIND TRUE CACHE BOOL "Choose if Emscripten (Wasm/JS) bindings should be built")
 
 if (EMSCRIPTEN)
